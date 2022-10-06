@@ -45,8 +45,6 @@ Working with Professor Stanley Bak, Professor Steven Skiena, and Xingzhi Guo, I 
 
 This framework can be used to measure two key measures developed for the quantification of neural network fairness. I explain their motivation, derivation, and give examples in [this document](https://github.com/giorgianb/giorgianb.github.io/blob/5c6aa4b79367afb80294b4077ac0878253f462ac/fairness-exploration.pdf). These metrics, named *advantage* and *preference*, roughly map to the legal notions of *disparate treatment* and *disparate impact*, respectively. However, they have the following important advantages:
 
-- **Precision**: Each metrics quantifies precisely whether unfair outcomes are due to differing rules for each class, or for rules that have a preference for the features that happen more frequently in one class over the other.
-- **Intepretabily**: The metrics are straightforwardly interpretable to allow for clear reasoning if they indicate an unacceptable amount of unfairness.
-
-The *Advantage* gives the proportion of individuals of race `R_1` that would have been accepted by the classifier had they been of race
+- **Precision**: The input features that most contribute to disparate outcomes between classes can be investigated in order determine whether they are being used in a legitimate manner or are being used to reproduce biases.
+- **Intepretabily**: The metrics are straightforwardly interpretable to allow for clear reasoning if they indicate an unacceptable amount of unfairness. For example, if the *Advantage* is 10\%, that means 10\% of individuals of class `R_1` would have been accepted had they been of class `R_2`, all other things being held equal.
 
