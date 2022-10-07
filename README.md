@@ -59,4 +59,3 @@ A recent snapshot of the current state of our system was presented at the [ECML-
 
 <img src="full_model.png">
 <img src="seba_block.png">
-![Details of the SEBA Block](https://github.com/giorgianb/giorgianb.github.io/blob/main/seba_block.png)
