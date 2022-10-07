@@ -57,5 +57,6 @@ The challenge is that the particle collider generates data at a rate that greatl
  
 A recent snapshot of the current state of our system was presented at the [ECML-PKDD](https://2022.ecmlpkdd.org/wp-content/uploads/2022/09/sub_1256.pdf). The incorporation of physics-based knowledge into the model and feature design has repeatedly allowed for improvements in model performance. I have recently made further improvements on the accuracy by applying supervised-contrastive learning method to focus the model's attention on pixels specifically activated by the `B+ 🠒 Anti D0 🠒 K+π` decay mode.
 
-![An Overview of the Full Model](https://github.com/giorgianb/giorgianb.github.io/blob/main/full_model.png)
+<img src="full_model.png">
+<img src="seba_block.png">
 ![Details of the SEBA Block](https://github.com/giorgianb/giorgianb.github.io/blob/main/seba_block.png)
