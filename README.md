@@ -62,8 +62,11 @@ A recent snapshot of the current state of our system was presented at the [ECML-
 
 ## Accepted Papers
 T. Xuan, G. Borca-Tasciuc, Y. Zhu, Y. Sun, C. Dean, Z. Shi, and D. Yu, *Trigger Detection for the sPHENIX Experiment via Bipartite Graph Networks with Set Transformer*, European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases  (2022)
+
 T. Xuan, Y. Zhu, G. Borca-Tasciuc, M. Xiong Liu, Y. Sun, C. Dean, Y. Corrales Morales, Z. Shi and D. Yu, *End-To-End Pipeline for Trigger Detection on Hit and Track Graphs*, Innovative Applications of Artificial Intelligence (2022)
+
 Y. Whang, G. Borca-Tasciuc, N. Goel, P. Fodor, and M. Kifer, *Knowledge Authoring with Factual English*, International Conference on Logic Programming (2022)
+
 Y. Zhu, T. Xuan, G. Borca-Tasciuc and Y. Sun, *A new sPHENIX Heavy quark trigger algorithm based on graph neutral networks, Machine Learning and the Physical Sciences Workshop at the 35th Conference on Neural Information Processing Systems* (2021)
 
 ## Working Papers
