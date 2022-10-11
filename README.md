@@ -50,6 +50,8 @@ This framework can be used to measure two key measures developed for the quantif
 
 A draft of the paper outlining this project can be found [here](https://github.com/giorgianb/giorgianb.github.io/blob/main/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf).
 
+<img src="fairness-architecture.png">
+
 ### Machine Learning for Physics Applications
 Machine learning can be used in order to probe deeper into the fundamental laws of the universe. I am the lead research engineering at Sunrise Tech on the project of developing a triggering system for the new [sPHENIX](https://www.sphenix.bnl.gov/) particle detector. The triggering system is meant to detect events that occur extremely rarely and thus is expected to test the limits of the standard model. These are events  where a beauty particle is created and the `B+ 🠒 Anti D0 🠒 K+π` mode of decay is observed. 
 
