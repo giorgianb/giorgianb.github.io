@@ -5,6 +5,50 @@ I did my undergraduate at Stony Brook University in Electrical Engineering and C
 
 ## Projects
 
+### Fotini
+[Fotini](https://github.com/giorgianb/fotini) is a general photon simulation
+package, based on continuous-mode quantum mechanics. It is being actively
+developed for the [Figueroa Research
+Group](http://qit.physics.sunysb.edu/wordpress/). The purpose of fotini is to
+enable the verification and debugging of optical circuits.
+
+Fotini works through the efficient and correct handling of [Fock
+States](https://en.wikipedia.org/wiki/Fock_state). It computes output
+statistics using continuous-mode quantum mechanics, and thus for the supported
+optical circuit elements, reproduces all important quantum mechanical effects.
+While it supports *general* spectral amplitudes for a particular number state,
+it works particularly efficiently with number states expressible as
+`C_1*exp(Σa_it_i^2 + Σb_i*t_i + c)`. These covers a important variety of
+real-world usage.
+
+Fotini can calculate the complex interference phenomena arising from
+optical set-ups such as those seen in figure (1), producing the output
+probability distribution seen in figure (2). Please see the the [main
+page](https://github.com/giorgianb/fotini) for details on the using
+fotini and for more examples.
+<figure align="center">
+  <img src="figs/four-way-setup.png" alt="Four-Way Set-Up">
+  <figcaption>Fig. 1: Four-way Interference Set-Up</figcaption>
+</figure>
+
+
+<figure align="center">
+  <img src="figs/four-way.png" alt="Four-Way Interference Statistics">
+  <figcaption>Fig. 2: Four Way Interference Statistics</figcaption>
+</figure>
+
+### Neural Network Fairness
+Working with Professor Stanley Bak, Professor Steven Skiena, and Xingzhi Guo, I developed a [framework](https://github.com/giorgianb/nn_fairness) for quantifying *provable* fairness for neural networks. *H*-Polytopes that represent the entire input set are propagated through the network, and the location of each point in the input set is tracked. This can be used to measure two key metrics developed for the framework in order to quantify fairness. A unique integration method for the *H*-Polytopes are used to make the problem tractable, although further work remains to be done to allow for computational tractability for higher dimensions (Polytope volume computation is a `#P`-hard problem).
+
+This framework can be used to measure two key measures developed for the quantification of neural network fairness. I explain their motivation, derivation, and give examples in [this document](https://github.com/giorgianb/giorgianb.github.io/blob/main/docs/fairness-exploration.pdf). These metrics, named *advantage* and *preference*, roughly map to the legal notions of *disparate treatment* and *disparate impact*, respectively. However, they have the following important advantages:
+
+- **Precision**: Each metric quantifies precisely the reason why unfair outcomes occur. The metrics also allow specifying *valid discrimination criteria* (i.e.: at least a high school education is required). This allows for the precise investigation and diagnostic of *proxy variables* used to illegitimately determine the person's protected class. 
+- **Interpretabily**: The metrics are straightforwardly interpretable to allow for clear reasoning if they indicate an unacceptable amount of unfairness. For example, an *advantage* of 10% means that 10% of black individuals would have been interviewed if they had been white, all else being equal. A *preference* of 10% means that, applying the same rule for both male and female candidates, 10% more males than females are accepted. The classes depend on the problems at hand, and the metrics allow the handling of multiple classes.
+
+A draft of the paper outlining this project can be found [here](https://github.com/giorgianb/giorgianb.github.io/blob/main/docs/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf).
+
+<img src="figs/fairness-architecture.png">
+
 ### Multi-Stanza
 My senior Computer Science Honors Thesis was developing [mStanza](https://arxiv.org/abs/2208.03094) which is available to run and use on [github](https://github.com/giorgianb/multi-stanza). It is an extension of Stanford's [Stanza](https://github.com/stanfordnlp/stanza) NLP package which allows or the parsing of natural language sentences. Multi-Stanza was designed to address a fundamental feature of natural languages which was not incorporated into the design of Stanza: *ambiguity*. Natural languages have several valid interpretations. This can occur (non-exhautively) at the part-of-speech level of the sentence, at the lemma level of the sentence, or at the dependency level of the sentence. The following is an example of an ambiguous sentence at the dependency.
 Consider the sentence:
@@ -40,17 +84,6 @@ For this sentence, it is not clear whether `the man` has the telescope or `I` ha
 Multi-Stanza attempts to sort sentences by their plausibility of intepretation, from most plausible to least plausible, and offers rich mechanisms to tailor how that sorting is done towards the application at hand.
 
 
-### Neural Network Fairness
-Working with Professor Stanley Bak, Professor Steven Skiena, and Xingzhi Guo, I developed a [framework](https://github.com/giorgianb/nn_fairness) for quantifying *provable* fairness for neural networks. *H*-Polytopes that represent the entire input set are propagated through the network, and the location of each point in the input set is tracked. This can be used to measure two key metrics developed for the framework in order to quantify fairness. A unique integration method for the *H*-Polytopes are used to make the problem tractable, although further work remains to be done to allow for computational tractability for higher dimensions (Polytope volume computation is a `#P`-hard problem).
-
-This framework can be used to measure two key measures developed for the quantification of neural network fairness. I explain their motivation, derivation, and give examples in [this document](https://github.com/giorgianb/giorgianb.github.io/blob/main/docs/fairness-exploration.pdf). These metrics, named *advantage* and *preference*, roughly map to the legal notions of *disparate treatment* and *disparate impact*, respectively. However, they have the following important advantages:
-
-- **Precision**: Each metric quantifies precisely the reason why unfair outcomes occur. The metrics also allow specifying *valid discrimination criteria* (i.e.: at least a high school education is required). This allows for the precise investigation and diagnostic of *proxy variables* used to illegitimately determine the person's protected class. 
-- **Interpretabily**: The metrics are straightforwardly interpretable to allow for clear reasoning if they indicate an unacceptable amount of unfairness. For example, an *advantage* of 10% means that 10% of black individuals would have been interviewed if they had been white, all else being equal. A *preference* of 10% means that, applying the same rule for both male and female candidates, 10% more males than females are accepted. The classes depend on the problems at hand, and the metrics allow the handling of multiple classes.
-
-A draft of the paper outlining this project can be found [here](https://github.com/giorgianb/giorgianb.github.io/blob/main/docs/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf).
-
-<img src="figs/fairness-architecture.png">
 
 ### Machine Learning for Physics Applications
 Machine learning can be used in order to probe deeper into the fundamental laws of the universe. I am the lead research engineering at Sunrise Tech on the project of developing a triggering system for the new [sPHENIX](https://www.sphenix.bnl.gov/) particle detector. The triggering system is meant to detect events that occur extremely rarely and thus is expected to test the limits of the standard model. These are events  where a beauty particle is created and the `B+ 🠒 Anti D0 🠒 K+π` mode of decay is observed. 
