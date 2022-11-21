@@ -16,8 +16,8 @@ Fotini works through the efficient and correct handling of [Fock
 States](https://en.wikipedia.org/wiki/Fock_state). It computes output
 statistics using continuous-mode quantum mechanics, and thus for the supported
 optical circuit elements, reproduces all important quantum mechanical effects.
-While it supports *general* spectral amplitudes for a particular number state,
-it works particularly efficiently with number states expressible as
+While it supports *general* spectral amplitudes for a particular fock state, it
+works particularly efficiently with spectral amplitudes expressible as
 `C_1*exp(Σa_it_i^2 + Σb_i*t_i + c)`. These covers a important variety of
 real-world usage.
 
