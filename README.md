@@ -43,14 +43,14 @@ Multi-Stanza attempts to sort sentences by their plausibility of intepretation, 
 ### Neural Network Fairness
 Working with Professor Stanley Bak, Professor Steven Skiena, and Xingzhi Guo, I developed a [framework](https://github.com/giorgianb/nn_fairness) for quantifying *provable* fairness for neural networks. *H*-Polytopes that represent the entire input set are propagated through the network, and the location of each point in the input set is tracked. This can be used to measure two key metrics developed for the framework in order to quantify fairness. A unique integration method for the *H*-Polytopes are used to make the problem tractable, although further work remains to be done to allow for computational tractability for higher dimensions (Polytope volume computation is a `#P`-hard problem).
 
-This framework can be used to measure two key measures developed for the quantification of neural network fairness. I explain their motivation, derivation, and give examples in [this document](https://github.com/giorgianb/giorgianb.github.io/blob/main/fairness-exploration.pdf). These metrics, named *advantage* and *preference*, roughly map to the legal notions of *disparate treatment* and *disparate impact*, respectively. However, they have the following important advantages:
+This framework can be used to measure two key measures developed for the quantification of neural network fairness. I explain their motivation, derivation, and give examples in [this document](https://github.com/giorgianb/giorgianb.github.io/blob/main/docs/fairness-exploration.pdf). These metrics, named *advantage* and *preference*, roughly map to the legal notions of *disparate treatment* and *disparate impact*, respectively. However, they have the following important advantages:
 
 - **Precision**: Each metric quantifies precisely the reason why unfair outcomes occur. The metrics also allow specifying *valid discrimination criteria* (i.e.: at least a high school education is required). This allows for the precise investigation and diagnostic of *proxy variables* used to illegitimately determine the person's protected class. 
 - **Interpretabily**: The metrics are straightforwardly interpretable to allow for clear reasoning if they indicate an unacceptable amount of unfairness. For example, an *advantage* of 10% means that 10% of black individuals would have been interviewed if they had been white, all else being equal. A *preference* of 10% means that, applying the same rule for both male and female candidates, 10% more males than females are accepted. The classes depend on the problems at hand, and the metrics allow the handling of multiple classes.
 
-A draft of the paper outlining this project can be found [here](https://github.com/giorgianb/giorgianb.github.io/blob/main/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf).
+A draft of the paper outlining this project can be found [here](https://github.com/giorgianb/giorgianb.github.io/blob/main/docs/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf).
 
-<img src="fairness-architecture.png">
+<img src="figs/fairness-architecture.png">
 
 ### Machine Learning for Physics Applications
 Machine learning can be used in order to probe deeper into the fundamental laws of the universe. I am the lead research engineering at Sunrise Tech on the project of developing a triggering system for the new [sPHENIX](https://www.sphenix.bnl.gov/) particle detector. The triggering system is meant to detect events that occur extremely rarely and thus is expected to test the limits of the standard model. These are events  where a beauty particle is created and the `B+ 🠒 Anti D0 🠒 K+π` mode of decay is observed. 
@@ -59,7 +59,7 @@ The challenge is that the particle collider generates data at a rate that greatl
  
 A recent snapshot of the current state of our system was presented at the [ECML-PKDD](https://2022.ecmlpkdd.org/wp-content/uploads/2022/09/sub_1256.pdf). The incorporation of physics-based knowledge into the model and feature design has repeatedly allowed for improvements in model performance. I have recently made further improvements on the accuracy by applying supervised-contrastive learning method to focus the model's attention on pixels specifically activated by the `B+ 🠒 Anti D0 🠒 K+π` decay mode.
 
-<img src="seba_block.png">
+<img src="figs/seba_block.png">
 
 ## Accepted Papers
 T. Xuan, G. Borca-Tasciuc, Y. Zhu, Y. Sun, C. Dean, Z. Shi, and D. Yu, *Trigger Detection for the sPHENIX Experiment via Bipartite Graph Networks with Set Transformer*, European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases  (2022)
@@ -71,7 +71,7 @@ Y. Whang, G. Borca-Tasciuc, N. Goel, P. Fodor, and M. Kifer, *Knowledge Authorin
 Y. Zhu, T. Xuan, G. Borca-Tasciuc and Y. Sun, *A new sPHENIX Heavy quark trigger algorithm based on graph neutral networks, Machine Learning and the Physical Sciences Workshop at the 35th Conference on Neural Information Processing Systems* (2021)
 
 ## Working Papers
-G. Borca-Tasciuc, X. Guo, S. Bak and S. Skiena, [*Provable Fairness for Neural Network Models using Formal Verification*](https://github.com/giorgianb/giorgianb.github.io/blob/main/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf)
+G. Borca-Tasciuc, X. Guo, S. Bak and S. Skiena, [*Provable Fairness for Neural Network Models using Formal Verification*](https://github.com/giorgianb/giorgianb.github.io/blob/main/doc/Provable_Fairness_for_Neural_Network_Models_using_Formal_Verification.pdf)
 
 ## Philosphical Interests
 Correct Reasoning as at the core of effectively utilizing new knowledge. C. S. Pierce starts by investigating the basic elements present in our experience and uses this to develop his theory of signs (semiotics), his theory of reality, and finally uses these previous two theories to investigate the types of reasoning and their justification. Nowadays, we take the existence of quantified logic for granted, and cannot image working without such a basic mental tool for reasoning. It is incredibly interesting to see Pierce develop and argue for quantified logic using his theories in an era when it was still emerging. It raises the question of whether we can further revolutionize the mental tools we use to reason to a similar extent. Pierce's writings on the process of improving the mental tools available at the time provide important insight into the process of doing so. By pushing the capabilities of logic, Pierce helped extend the types of statements for which one could provide rigourous proofs. Much of language use and argumentation remains outside the capabilities of the logic of today, so it is clear that there is still work to be done.
