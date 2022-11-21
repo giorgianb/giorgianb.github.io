@@ -26,10 +26,12 @@ optical set-ups such as those seen in figure (1), producing the output
 probability distribution seen in figure (2). Please see the the [main
 page](https://github.com/giorgianb/fotini) for details on the using
 fotini and for more examples.
+<p align="center">
 <figure align="center">
   <img src="figs/four-way-setup.png" alt="Four-Way Set-Up">
   <figcaption>Fig. 1: Four-way Interference Set-Up</figcaption>
 </figure>
+</p>
 
 
 <figure align="center">
